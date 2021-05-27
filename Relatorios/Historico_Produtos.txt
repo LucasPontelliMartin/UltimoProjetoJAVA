@@ -1,0 +1,9 @@
+001 - Bebida - Coca-Cola Lata 350ml - 010 - 2,30 - 3,50
+002 - Bebida - Água 500ml - 025 - 1,40 - 2,50
+003 - Comida - Guarana - 010 - 2,30 - 3,50
+0510 - Bebida - Teste - 12 - 1,00 - 1,00
+001 - Vassoura - 010 - 2.30 
+002 - Rodo - 025 - 1.40 
+003 - Copo Americano - 08 - 2.50 
+004 - Taça Vinho 300 ml - 010 - 2.30
+0510 - Cadeira - 3 - 15.00

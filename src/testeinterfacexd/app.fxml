@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="1080.0" prefWidth="1920.0" styleClass="app" stylesheets="@../Views/StyleSheet.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testeinterfacexd.appController">
+    <children>
+      <Pane layoutY="-2.0" prefHeight="1200.0" prefWidth="293.0" styleClass="panel" stylesheets="@../Views/StyleSheet.css">
+         <children>
+            <Group layoutY="360.0">
+               <children>
+                  <Pane layoutX="70.0" layoutY="22.0" prefHeight="431.0" prefWidth="126.0">
+                     <children>
+                        <Group layoutX="14.0" layoutY="27.0">
+                           <children>
+                              <ImageView fx:id="imgInicio" fitHeight="21.0" fitWidth="22.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Assets/Icons/HomeGrey.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="imgInicioBlue" fitHeight="21.0" fitWidth="22.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Assets/Icons/HomeBlue.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnInicio" layoutX="30.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" styleClass="btns" text="Inicio" textFill="#226cfc">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Group>
+                        <Group layoutX="14.0" layoutY="86.0">
+                           <children>
+                              <ImageView fx:id="imgAgenda" fitHeight="21.0" fitWidth="22.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Assets/Icons/CalendarGrey.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="imgAgendaBlue" fitHeight="21.0" fitWidth="22.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../Assets/Icons/CalendarBlue.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnAgenda" layoutX="30.0" layoutY="-4.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="78.0" styleClass="btns" text="Agenda">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Group>
+                        <Group layoutX="14.0" layoutY="146.0">
+                           <children>
+                              <ImageView fx:id="imgCliente" fitHeight="21.0" fitWidth="22.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Assets/Icons/ClientGrey.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="imgClienteBlue" fitHeight="21.0" fitWidth="22.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../Assets/Icons/ClientBlue.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnCliente" layoutX="28.0" layoutY="-7.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="78.0" styleClass="btns" text="Cliente">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Group>
+                        <Group layoutX="14.0" layoutY="206.0">
+                           <children>
+                              <ImageView fx:id="imgVendas" fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Assets/Icons/SalesGrey.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="imgVendasBlue" fitHeight="21.0" fitWidth="22.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../Assets/Icons/SalesBlue.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnVendas" layoutX="28.0" layoutY="-8.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="78.0" styleClass="btns" text="Vendas">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Group>
+                        <Group layoutX="14.0" layoutY="266.0">
+                           <children>
+                              <ImageView fx:id="imgEstoque" fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Assets/Icons/StockGrey.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="imgEstoqueBlue" fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../Assets/Icons/StockBlue.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnEstoque" layoutX="22.0" layoutY="-12.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="89.0" styleClass="btns" text="Estoque">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Group>
+                        <Group layoutX="14.0" layoutY="326.0">
+                           <children>
+                              <ImageView fx:id="imgFinanceiro" fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Assets/Icons/FinancialGrey.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="imgFinanceiroBlue" fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../Assets/Icons/FinancialBlue.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnFinanceiro" layoutX="31.0" layoutY="-11.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="96.0" styleClass="btns" text="Financeiro">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Group>
+                     </children>
+                  </Pane>
+                  <Group>
+                     <children>
+                        <Label layoutX="70.0" text="MENU">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+               </children>
+            </Group>
+            <Line endX="100.0" layoutX="146.0" layoutY="278.0" startX="-100.0" strokeWidth="0.5" />
+            <ImageView fx:id="imgSair" fitHeight="150.0" fitWidth="200.0" layoutX="47.0" layoutY="996.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Pane/btnSair.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="paneSelected" layoutY="400.0" prefHeight="41.0" prefWidth="5.0" style="-fx-background-color: #226CFC;" visible="false" />
+      <Pane fx:id="paneFinanceiro" layoutY="-72.0" prefHeight="1080.0" prefWidth="1920.0" visible="false">
+         <children>
+            <ImageView fx:id="txtVendas" fitHeight="240150.0" fitWidth="372.0" layoutX="474.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Pane/Retângulo%202@2x.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="482.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Pane/Vendas_Label@2x.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="txtCustos" fitHeight="240150.0" fitWidth="372.0" layoutX="944.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Pane/Retângulo%202@2x.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="49.0" fitWidth="233.0" layoutX="958.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Pane/Custos-Despesas_Label@2x.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="txtLucros" fitHeight="240150.0" fitWidth="372.0" layoutX="1431.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Pane/Retângulo%202@2x.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="49.0" fitWidth="233.0" layoutX="1441.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Pane/Lucro_Label@2x.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="502.74" fitWidth="799.0" layoutX="751.0" layoutY="495.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Pane/Grupo%20278@2x.png" />
+               </image>
+            </ImageView>
+            <TextArea fx:id="txtCampoLucro" editable="false" layoutX="1457.0" layoutY="261.0" prefHeight="162.0" prefWidth="322.0">
+               <font>
+                  <Font size="48.0" />
+               </font></TextArea>
+            <TextArea fx:id="txtCampoVendas" editable="false" layoutX="499.0" layoutY="263.0" prefHeight="162.0" prefWidth="322.0">
+               <font>
+                  <Font size="48.0" />
+               </font></TextArea>
+            <TextArea fx:id="txtCampoCustos" editable="false" layoutX="969.0" layoutY="261.0" prefHeight="162.0" prefWidth="322.0" scrollTop="80.0">
+               <font>
+                  <Font size="48.0" />
+               </font></TextArea>
+            <Button fx:id="btnHistoricoAgendamento" layoutX="1403.0" layoutY="600.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="96.0" style="-fx-background-color: #FFF; -fx-border-radius: 1em; -fx-border-color: #226cfc;" text="DOWLOAD" textFill="#226cfc" />
+            <Button fx:id="btnHistoricoEstoque" layoutX="1403.0" layoutY="858.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="96.0" styleClass="btns2" text="DOWLOAD" textFill="#226cfc" />
+            <Button fx:id="btnHistoricoComandas" layoutX="1403.0" layoutY="768.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="96.0" styleClass="btns2" text="DOWLOAD" textFill="#226cfc" />
+            <Button fx:id="btnHistoricoCliente" layoutX="1403.0" layoutY="682.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="96.0" styleClass="btns2" text="DOWLOAD" textFill="#226cfc" />
+            <Label layoutX="335.0" layoutY="97.0" text="Financeiro">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneEstoque1" layoutX="293.0" layoutY="-7.0" prefHeight="1200.0" prefWidth="1617.0" visible="false">
+         <children>
+            <ImageView fx:id="imgAddProd" fitHeight="140.0" fitWidth="134.0" layoutX="1234.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Icons/New%20Event%20Card.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="507.0" fitWidth="1441.0" layoutX="44.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Pane/Grupo%20237.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgInsumo" fitHeight="211.0" fitWidth="1515.0" layoutX="59.0" layoutY="777.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Pane/Grupo%20246@2x.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tbConsumoCliente" layoutX="72.0" layoutY="242.0" prefHeight="421.0" prefWidth="1382.0" styleClass="column-header-background">
+              <columns>
+                <TableColumn fx:id="clmCodigo" prefWidth="100.0" text="Código" />
+                <TableColumn fx:id="clmCategoria" prefWidth="150.0" text="Categoria" />
+                  <TableColumn fx:id="clmProduto" prefWidth="591.0" text="Produto" />
+                  <TableColumn fx:id="clmQuantidade" minWidth="0.0" prefWidth="147.0" text="Quantidade" />
+                  <TableColumn fx:id="clmPrecoCusto" prefWidth="200.0" text="Preço Custo (R$)" />
+                  <TableColumn fx:id="clmPrecoVenda" prefWidth="205.0" text="Preço Venda (R$)" />
+              </columns>
+            </TableView>
+            <TableView fx:id="tbInsumo" layoutX="85.0" layoutY="788.0" prefHeight="182.0" prefWidth="1362.0">
+               <columns>
+                  <TableColumn fx:id="clmCodigoInsummo" prefWidth="190.0" text="Código" />
+                  <TableColumn fx:id="clmProdutoInsumo" prefWidth="779.0" text="Produto" />
+                  <TableColumn fx:id="clmQuantidadeInsumo" prefWidth="200.0" text="Quantidade" />
+                  <TableColumn fx:id="clmPrecoCustoInsumo" prefWidth="212.0" text="Preço Custo (R$)" />
+               </columns>
+               <styleClass>
+                  <String fx:value="column-header-background" />
+                  <String fx:value="table-view" />
+               </styleClass>
+            </TableView>
+            <ImageView fitHeight="57.0" fitWidth="400.0" layoutX="1181.0" layoutY="749.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Pane/Grupo%20248@2x.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="57.0" fitWidth="400.0" layoutX="1194.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Pane/Grupo%2010.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="44.0" layoutY="109.0" text="Estoque">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneNovoProd" layoutX="346.0" layoutY="69.0" prefHeight="955.0" prefWidth="960.0" style="-fx-border-color: #CCCC; -fx-border-radius: 0.35em;" visible="false">
+         <children>
+            <Label layoutX="25.0" layoutY="78.0" text="Código" textFill="#929292">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <TextField editable="false" layoutX="165.0" layoutY="68.0" prefHeight="65.0" prefWidth="178.0" style="-fx-background-color: #FFF; -fx-border-radius: 0.41em; -fx-border-color: #969696;" text="0510">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </TextField>
+            <ComboBox fx:id="cmbTipoProd" layoutX="87.0" layoutY="263.0" prefHeight="57.0" prefWidth="248.0" styleClass="btns2" />
+            <Label layoutX="87.0" layoutY="223.0" text="Tipo de Produto" textFill="#929292">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmbCategoriaProd" layoutX="613.0" layoutY="263.0" prefHeight="57.0" prefWidth="248.0" styleClass="btns2" />
+            <Label layoutX="613.0" layoutY="227.0" text="Categoria" textFill="#929292">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNomeProd" layoutX="86.0" layoutY="444.0" prefHeight="57.0" prefWidth="782.0" style="-fx-background-color: #FFF; -fx-border-radius: 0.41em; -fx-border-color: #226cfc;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Label layoutX="86.0" layoutY="408.0" text="Nome do Produto" textFill="#929292">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtPrecoCusto" layoutX="84.0" layoutY="619.0" prefHeight="57.0" prefWidth="230.0" promptText="R$" style="-fx-background-color: #FFF; -fx-border-radius: 0.41em; -fx-border-color: #226cfc;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtPrecoVenda" layoutX="365.0" layoutY="619.0" prefHeight="57.0" prefWidth="230.0" promptText="R$" style="-fx-background-color: #FFF; -fx-border-radius: 0.41em; -fx-border-color: #226cfc;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtQuantidade" layoutX="638.0" layoutY="619.0" prefHeight="57.0" prefWidth="230.0" style="-fx-background-color: #FFF; -fx-border-radius: 0.41em; -fx-border-color: #226cfc;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Label layoutX="84.0" layoutY="583.0" text="Preço de Custo" textFill="#929292">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="365.0" layoutY="583.0" text="Preço de Venda" textFill="#929292">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="638.0" layoutY="583.0" text="Quantidade" textFill="#929292">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnLimparModNovoProduto" layoutX="478.0" layoutY="870.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="165.0" style="-fx-background-color: #FFF; -fx-border-radius: 0.41em; -fx-border-color: #226cfc;" text="Limpar">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSalvarNovoProd" layoutX="703.0" layoutY="870.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="165.0" style="-fx-border-radius: 0.41em; -fx-background-color: #226cfc; -fx-border-color: #FFF;" text="Salvar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="btnSairModNovoProduto" fitHeight="60.0" fitWidth="60.0" layoutX="808.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Icons/Icon%20ionic-ios-close-circle@2x.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="paneInicio" layoutX="295.0" layoutY="-2.0" prefHeight="1193.0" prefWidth="1623.0" visible="false">
+         <children>
+            <ImageView fitHeight="230.0" fitWidth="930.0" layoutX="40.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Pane/Grupo%20141@2x.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="44.0" layoutY="109.0" text="Inicio">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="380.0" fitWidth="380.0" layoutX="38.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Pane/Calendar%20widget.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="380.0" fitWidth="540.0" layoutX="423.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Pane/Middle%20box%20widget.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="205.0" fitWidth="435.0" layoutX="1019.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Pane/Grupo%20178.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="205.0" fitWidth="456.0" layoutX="1019.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Pane/Grupo%20179.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="paneCliente" layoutX="295.0" layoutY="-3.0" prefHeight="1274.0" prefWidth="1623.0" visible="false">
+         <children>
+            <TableView fx:id="tbCliente" layoutX="243.0" layoutY="233.0" prefHeight="794.0" prefWidth="1282.0" styleClass="column-header-background">
+               <columns>
+                  <TableColumn id="nome" fx:id="clmNomeCliente" prefWidth="310.0" text="Nome" />
+                  <TableColumn id="cpf" fx:id="clCpf" prefWidth="325.0" text="CPF" />
+                  <TableColumn id="email" fx:id="clEmail" prefWidth="401.0" text="Email" />
+                  <TableColumn id="telefone" fx:id="clTelefone" prefWidth="245.0" text="Telefone" />
+               </columns>
+            </TableView>
+            <ImageView fx:id="btnNovoCliente" fitHeight="150.0" fitWidth="200.0" layoutX="57.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Pane/AddNovoCliente_Pane@2x.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="42.0" layoutY="114.0" text="Cliente">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneNovoCliente" layoutX="346.0" layoutY="68.0" prefHeight="967.0" prefWidth="960.0" style="-fx-border-color: #CCCC; -fx-border-radius: 0.31em;" visible="false">
+         <children>
+            <ImageView fitHeight="955.0" fitWidth="960.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Assets/Pane/Modal%20-%20Cadastrar%20Novo%20Cliente@2x.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtNomeCliente" layoutX="91.0" layoutY="200.0" prefHeight="49.0" prefWidth="776.0" style="-fx-background-color: #FFF; -fx-border-color: #226cfc; -fx-border-radius: 0.41em;" styleClass="panel">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtCpf" layoutX="91.0" layoutY="340.0" prefHeight="49.0" prefWidth="776.0" style="-fx-background-color: #FFF; -fx-border-color: #226cfc; -fx-border-radius: 0.41em;" styleClass="panel">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtEmail" layoutX="91.0" layoutY="480.0" prefHeight="49.0" prefWidth="776.0" style="-fx-background-color: #FFF; -fx-border-color: #226cfc; -fx-border-radius: 0.41em;" styleClass="panel">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtTelefone" layoutX="91.0" layoutY="620.0" prefHeight="49.0" prefWidth="776.0" style="-fx-background-color: #FFF; -fx-border-color: #226cfc; -fx-border-radius: 0.41em;" styleClass="panel">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnSalvarCliente" layoutX="708.0" layoutY="874.0" mnemonicParsing="false" opacity="0.0" prefHeight="45.0" prefWidth="152.0" styleClass="panel" text="Button" />
+            <Button fx:id="btnLimparCliente" layoutX="485.0" layoutY="874.0" mnemonicParsing="false" opacity="0.0" prefHeight="45.0" prefWidth="152.0" styleClass="panel" text="Button" />
+            <Button fx:id="btnFecharNovoCliente" layoutX="871.0" layoutY="29.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="61.0" styleClass="panel" text="Button" />
+            <Label layoutX="91.0" layoutY="164.0" text="Nome do Cliente" textFill="#929292">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnLimparModNovoProduto1" layoutX="470.0" layoutY="847.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="165.0" style="-fx-background-color: #FFF; -fx-border-radius: 0.41em; -fx-border-color: #226cfc;" text="Limpar">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSalvarNovoProd1" layoutX="695.0" layoutY="847.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="165.0" style="-fx-border-radius: 0.41em; -fx-background-color: #226cfc; -fx-border-color: #FFF;" text="Salvar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Button>
+            <Label layoutX="91.0" layoutY="304.0" text="CPF" textFill="#929292">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="91.0" layoutY="444.0" text="Email" textFill="#929292">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="91.0" layoutY="584.0" text="Telefone" textFill="#929292">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="807.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Icons/Icon%20ionic-ios-close-circle@2x.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="paneAgenda" layoutX="326.0" layoutY="14.0" prefHeight="1080.0" prefWidth="1920.0" visible="false">
+         <children>
+            <ImageView fitHeight="938.0" fitWidth="1478.0" layoutX="126.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Icons/Grupo%20279@2x.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="paneVenda" layoutX="325.0" layoutY="8.0" prefHeight="1200.0" prefWidth="1617.0" visible="false">
+         <children>
+            <ImageView fitHeight="507.0" fitWidth="1441.0" layoutX="44.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Icons/WhatsApp%20Image%202021-05-26%20at%2021.04.16%20(1).jpeg" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tbConsumoVenda" layoutX="72.0" layoutY="328.0" prefHeight="421.0" prefWidth="1382.0" styleClass="column-header-background">
+               <columns>
+                  <TableColumn fx:id="clmCodigoVenda" prefWidth="152.0" text="Código" />
+                  <TableColumn fx:id="clmProdutoVenda" prefWidth="539.0" text="Produto" />
+                  <TableColumn fx:id="clmQuantidadeVenda" minWidth="0.0" prefWidth="226.0" text="Quantidade" />
+                  <TableColumn fx:id="clmPrecoUnidadeVenda" prefWidth="236.0" text="Preço Unidade (R$)" />
+                  <TableColumn fx:id="clmPrecoVendaVenda" prefWidth="226.0" text="Preço Venda (R$)" />
+               </columns>
+            </TableView>
+            <ImageView fitHeight="57.0" fitWidth="400.0" layoutX="1194.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Icons/WhatsApp%20Image%202021-05-26%20at%2021.04.16.jpeg" />
+               </image>
+            </ImageView>
+            <Label layoutX="44.0" layoutY="109.0" text="Vendas">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imgAddVenda" fitHeight="150.0" fitWidth="200.0" layoutX="1246.0" layoutY="75.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Icons/WhatsApp%20Image%202021-05-26%20at%2021.04.15%20(1).jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="paneNovaVenda" layoutX="356.0" layoutY="-12.0" prefHeight="955.0" prefWidth="960.0" style="-fx-border-color: #CCCC; -fx-border-radius: 0.35em;" visible="false">
+         <children>
+            <Label layoutX="25.0" layoutY="240.0" text="Código" textFill="#929292">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigoVenda" layoutX="165.0" layoutY="230.0" prefHeight="65.0" prefWidth="178.0" style="-fx-background-color: #FFF; -fx-border-radius: 0.41em; -fx-border-color: #969696;">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtNomeProdVenda" layoutX="25.0" layoutY="398.0" prefHeight="57.0" prefWidth="782.0" style="-fx-background-color: #FFF; -fx-border-radius: 0.41em; -fx-border-color: #226cfc;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Label layoutX="25.0" layoutY="354.0" text="Nome do Produto" textFill="#929292">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtPrecoCustoVenda" layoutX="171.0" layoutY="588.0" prefHeight="57.0" prefWidth="230.0" promptText="R$" style="-fx-background-color: #FFF; -fx-border-radius: 0.41em; -fx-border-color: #226cfc;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtQuantidadeVenda" layoutX="473.0" layoutY="588.0" prefHeight="57.0" prefWidth="230.0" style="-fx-background-color: #FFF; -fx-border-radius: 0.41em; -fx-border-color: #226cfc;" text="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Label layoutX="171.0" layoutY="552.0" text="Preço do Produto" textFill="#929292">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="473.0" layoutY="552.0" text="Quantidade" textFill="#929292">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnLimparModNovoProduto2" layoutX="478.0" layoutY="870.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="165.0" style="-fx-background-color: #FFF; -fx-border-radius: 0.41em; -fx-border-color: #226cfc;" text="Limpar">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSalvarNovaVenda" layoutX="703.0" layoutY="870.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="165.0" style="-fx-border-radius: 0.41em; -fx-background-color: #226cfc; -fx-border-color: #FFF;" text="Salvar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="btnSairModNovoProduto1" fitHeight="60.0" fitWidth="60.0" layoutX="808.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Icons/Icon%20ionic-ios-close-circle@2x.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

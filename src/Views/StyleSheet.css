@@ -1,0 +1,54 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30/03/2021, 01:57:28
+    Author     : LENOVO
+*/
+
+.app{
+    -fx-background-color: #FAFBFC;
+}
+
+.panel{
+    -fx-background-color: #FFFFFF;
+}
+
+.text{
+    -fx-background-color: #FFFFFF;
+}
+
+.btns{
+    -fx-background-color: #FFFFFF;
+}
+
+.btns2{
+    -fx-background-color: #FFFFFF;
+    -fx-border-radius: 1em;
+    -fx-border-color:  #226cfc;
+}
+
+.combo-box .cell{
+    -fx-text-fill: black;
+    -fx-font: 20px "System";
+}
+.customcell {
+    -fx-text-fill: black;
+    -fx-font: 20px "System";
+    /* No alternate highlighting */
+}
+
+.table-view{
+    -fx-background-color: #FFFFFF;
+    -fx-font: 20px "System";
+ }
+
+ .table-view .column-header-background .label{
+     -fx-background-color:#FFFFFF;
+     -fx-text-fill: black;
+     -fx-font: 20px "System";
+     -webkit-column-rule-color: #FFFFFF;
+}
+

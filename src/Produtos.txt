@@ -1,0 +1,4 @@
+001 - Bebida - Coca-Cola Lata 350ml - 010 - 2,30 - 3,50
+002 - Bebida - Água 500ml - 025 - 1,40 - 2,50
+003 - Comida - Guarana - 010 - 2,30 - 3,50
+0510 - Bebida - Teste - 12 - 1,00 - 1,00

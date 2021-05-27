@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="1200.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testeinterfacexd.AgendaController">
+   <children>
+      <Pane prefHeight="1200.0" prefWidth="293.0" styleClass="panel" stylesheets="@../Views/StyleSheet.css">
+         <children>
+            <Group layoutY="360.0">
+               <children>
+                  <Pane layoutX="70.0" layoutY="22.0" prefHeight="431.0" prefWidth="126.0">
+                     <children>
+                        <Group layoutX="14.0" layoutY="27.0">
+                           <children>
+                              <ImageView fx:id="imgInicio" fitHeight="21.0" fitWidth="22.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Assets/Icons/HomeGrey.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="imgInicioBlue" fitHeight="21.0" fitWidth="22.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../Assets/Icons/HomeBlue.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnInicio" layoutX="30.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" styleClass="btns" text="Inicio">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Group>
+                        <Group layoutX="14.0" layoutY="86.0">
+                           <children>
+                              <ImageView fx:id="imgAgenda" fitHeight="21.0" fitWidth="22.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Assets/Icons/CalendarGrey.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="imgAgendaBlue" fitHeight="21.0" fitWidth="22.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Assets/Icons/CalendarBlue.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnAgenda" layoutX="30.0" layoutY="-4.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="78.0" styleClass="btns" text="Agenda" textFill="#226cfc">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Group>
+                        <Group layoutX="14.0" layoutY="146.0">
+                           <children>
+                              <ImageView fx:id="imgCliente" fitHeight="21.0" fitWidth="22.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Assets/Icons/ClientGrey.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="imgClienteBlue" fitHeight="21.0" fitWidth="22.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../Assets/Icons/ClientBlue.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnCliente" layoutX="28.0" layoutY="-7.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="78.0" styleClass="btns" text="Cliente">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Group>
+                        <Group layoutX="14.0" layoutY="206.0">
+                           <children>
+                              <ImageView fx:id="imgVendas" fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Assets/Icons/SalesGrey.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="imgVendasBlue" fitHeight="21.0" fitWidth="22.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../Assets/Icons/SalesBlue.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnVendas" layoutX="28.0" layoutY="-8.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="78.0" styleClass="btns" text="Vendas">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Group>
+                        <Group layoutX="14.0" layoutY="266.0">
+                           <children>
+                              <ImageView fx:id="imgEstoque" fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Assets/Icons/StockGrey.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="imgEstoqueBlue" fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../Assets/Icons/StockBlue.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnEstoque" layoutX="27.0" layoutY="-8.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="89.0" styleClass="btns" text="Estoque">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Group>
+                        <Group layoutX="14.0" layoutY="326.0">
+                           <children>
+                              <ImageView fx:id="imgFinanceiro" fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Assets/Icons/FinancialGrey.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="imgFinanceiroBlue" fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../Assets/Icons/FinancialBlue.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnFinanceiro" layoutX="31.0" layoutY="-11.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="96.0" styleClass="btns" text="Financeiro">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Group>
+                        <Group layoutX="14.0" layoutY="386.0">
+                           <children>
+                              <ImageView fx:id="imgRelatorio" fitHeight="21.0" fitWidth="22.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Assets/Icons/ReportGrey.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="imgRelatorioBlue" fitHeight="21.0" fitWidth="22.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../Assets/Icons/ReportBlue.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnRelatorio" layoutX="26.0" layoutY="-11.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="102.0" styleClass="btns" text="Relatorios">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Group>
+                     </children>
+                  </Pane>
+                  <Group>
+                     <children>
+                        <Label layoutX="70.0" text="MENU">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+               </children>
+            </Group>
+            <Line endX="100.0" layoutX="146.0" layoutY="278.0" startX="-100.0" strokeWidth="0.5" />
+            <ImageView fx:id="imgSair" fitHeight="150.0" fitWidth="200.0" layoutX="47.0" layoutY="996.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Pane/btnSair.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="paneSelected" layoutY="455.0" prefHeight="41.0" prefWidth="5.0" style="-fx-background-color: #226CFC;" />
+   </children>
+</AnchorPane>
