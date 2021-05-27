@@ -8,9 +8,11 @@ package testeinterfacexd;
 // <editor-fold defaultstate="collapsed" desc="IMPORTS">
 import Controller.ClienteController;
 import Controller.ProdutoController;
+import Controller.UsuarioController;
 import Controller.VendaController;
 import Model.ProdutoModel;
 import Model.ClienteModel;
+import Model.UsuarioModel;
 import Model.VendaModel;
 import java.io.BufferedReader;
 import java.io.File;
@@ -49,7 +51,9 @@ import java.io.File;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
+import javafx.scene.control.PasswordField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 
 // </editor-fold>
 
@@ -241,6 +245,42 @@ public class appController implements Initializable {
     private TextField txtQuantidadeVenda;
     @FXML
     private Button btnSalvarNovaVenda;
+    @FXML
+    private ImageView imgLogin;
+    @FXML
+    private Pane paneMenu;
+    @FXML
+    private Pane paneLogin;
+    @FXML
+    private TextField txtEmailLogin;
+    @FXML
+    private ImageView imgFazLogin;
+    @FXML
+    private PasswordField txtSenhaLogin;
+    @FXML
+    private Pane paneInicioLogin;
+    @FXML
+    private ImageView imgCadastrarLogin;
+    @FXML
+    private ImageView imgVoltar;
+    @FXML
+    private Pane paneCadastrarUsuario;
+    @FXML
+    private TextField txtEmailUsuario;
+    @FXML
+    private TextField txtNomeUsuario;
+    @FXML
+    private TextField txtCPFUsuario;
+    @FXML
+    private TextField txtTelefoneUsuario;
+    @FXML
+    private Button btnLimparModNovoProduto21;
+    @FXML
+    private Button btnSalvarNovoUsuario;
+    @FXML
+    private PasswordField txtSenhaUsuario;
+    @FXML
+    private ImageView imgVoltarLogin;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -340,7 +380,69 @@ public class appController implements Initializable {
             initTableCliente();      
         });
 // </editor-fold>
-    
+    // <editor-fold defaultstate="collapsed" desc="Botao Login">
+        imgLogin.setOnMouseClicked((Event event) -> {
+                   paneEstoque1.setVisible(false);
+                   paneVenda.setVisible(false);
+                   paneLogin.setVisible(true);
+                  
+                });
+        
+        imgFazLogin.setOnMouseClicked((Event event) -> {
+                   
+            String email = txtEmailLogin.getText();
+            String senha = txtSenhaLogin.getText();
+            
+            UsuarioController control = new UsuarioController();
+            UsuarioModel user = new UsuarioModel();
+                try {
+                    user = control.Buscar(email, senha);
+                    if(user.getNome() != null)
+                    {
+                        paneAgenda.setVisible(true);
+                        paneMenu.setVisible(true);
+                        paneLogin.setVisible(false);
+                        paneInicioLogin.setVisible(false);
+                    }
+                } catch (IOException ex) {
+                    Logger.getLogger(appController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                });
+        
+        
+        imgCadastrarLogin.setOnMouseClicked((Event event) -> {
+            paneCadastrarUsuario.setVisible(true);
+           paneLogin.setVisible(false);
+                });
+        
+        imgVoltar.setOnMouseClicked((Event event) -> {
+            paneCadastrarUsuario.setVisible(false);
+            paneLogin.setVisible(false);
+           }); 
+        
+        imgVoltarLogin.setOnMouseClicked((Event event) -> {
+            paneCadastrarUsuario.setVisible(false);
+            paneLogin.setVisible(false);
+           }); 
+        
+        btnSalvarNovoUsuario.setOnMouseClicked((Event event) -> {
+             
+            UsuarioController user = new UsuarioController();
+            UsuarioModel usuario = new UsuarioModel ();
+            usuario.setNome(txtNomeUsuario.getText());
+            usuario.setCpf(txtCPFUsuario.getText());
+            usuario.setEmail(txtEmailUsuario.getText());
+            usuario.setTelefone(txtTelefoneUsuario.getText());
+            usuario.setSenha(txtSenhaUsuario.getText());
+            
+                try {
+                    user.Salvar(usuario);
+                } catch (IOException ex) {
+                    Logger.getLogger(appController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+           }); 
+// </editor-fold>
+        
         // <editor-fold defaultstate="collapsed" desc="Botao Vendas">
             btnVendas.setOnAction((ActionEvent event) -> {
             paneSelected.setLayoutY(578);

@@ -1150,9 +1150,6 @@
     </target>
 
 
-    <!-- Copy dependent libraries -->
-    
-    <!-- Note: target "-jfx-copylibs" is referenced from NB 7.1 build-impl.xml -->
     <target name="-jfx-copylibs" depends="init,compile,-pre-pre-jar,-pre-jar,-jfx-copylibs-warning" unless="fallback.no.javascript">
         <jfx-copylibs-js-impl/>
     </target>
@@ -1176,7 +1173,6 @@
                     );
                 </scriptmapper>
             </pathconvert>
-            <!-- add possibly missing dependencies at distance 2 (build system logic thus provides transitive closure) -->
             <local name="run.and.lib.classpath"/>
             <echo message="JavaScript: -jfx-copylibs" level="verbose"/>
             <script language="javascript">
@@ -1243,10 +1239,6 @@
         <copy file="${javafx.preloader.jar.path}" todir="${dist.dir}${file.separator}lib"/>
     </target>
 
-
-    <!-- Optional classpath re-base of dependent JAR manifests after copy to lib/, required by GlassFish -->
-
-    <!-- Note: target "-rebase-libs" is referenced from NB 7.1 build-impl.xml -->
     <target name="-rebase-libs" depends="-check-project, -jfx-copylibs, -check-rebase-libs, -rebase-libs-warning" if="do-rebase-lib-jars">
         <rebase-libs-js-impl/>
     </target>
@@ -1314,7 +1306,6 @@
             <local name="manifest.file.temp"/>
             <property name="manifest.file.temp" value="${tmpdir}${file.separator}META-INF${file.separator}MANIFEST.MF" />
             <echo message="manifest.file.temp = ${manifest.file.temp}" level="verbose"/>
-            <!-- edited manifest file -->
             <local name="manifest.file.temp.new"/>
             <property name="manifest.file.temp.new" value="${manifest.file.temp}_new" />
             <echo message="manifest.file.temp.new = ${manifest.file.temp.new}" level="verbose"/>
